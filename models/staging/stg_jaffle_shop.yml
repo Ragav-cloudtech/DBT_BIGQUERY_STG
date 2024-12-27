@@ -1,0 +1,20 @@
+  models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        description: The primary key for customers.
+        data_tests: 
+                - unique
+                - not_null
+  - name: stg_orders
+    columns:
+      - name: order_id
+        description: Primary key for orders.
+        data_tests:
+           - unique
+           - not_null         
+      - name: status
+        description: '{{ doc ("order_status") }}'
+        tests: 
+          - accepted_values:
+              values: ["completed", "shipped","returned","return_pending","placed"]
