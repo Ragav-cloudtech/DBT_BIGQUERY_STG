@@ -14,7 +14,7 @@
            - unique
            - not_null         
       - name: status
-        description: '{{ doc ("order_status") }}'
+        description: '{{ doc ("orders_status") }}'
         tests: 
           - accepted_values:
               values: ["completed", "shipped","returned","return_pending","placed"]
