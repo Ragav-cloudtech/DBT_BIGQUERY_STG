@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: Raw
+    description: A clone of a Postgres application database.
+    database: dbt-bigquery-445422
+    schema: Raw
+    tables:
+      - name: payments
+        description: Raw payments data.
+
+
